@@ -1,0 +1,149 @@
+$black: black;
+$white: white;
+$green: green;
+$border-color: rgba(255, 255, 255, 0.2);
+
+.home-container {
+  padding: 0 200px;
+  height: calc(80vh - 80px);
+
+  .hero-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 50px;
+
+    .title,
+    .subtitle {
+      text-shadow: 0 0 10px $black, 0 0 20px $black, 0 0 30px $black;
+    }
+
+    .title {
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 90px;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      font-weight: 400;
+      padding-right: 350px;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 20px;
+
+      .order,
+      .menu {
+        min-width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        backdrop-filter: blur(10px);
+        border-radius: 7px;
+        border: 1px solid $border-color;
+        transition: all 0.5s ease-in-out;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 10px 20px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          border: 1px solid $white;
+
+          span {
+            box-shadow: 0 0 10px $green, 0 0 20px $green, 0 0 30px $green;
+          }
+        }
+      }
+
+      .order {
+        span {
+          background-color: $green;
+        }
+      }
+
+      .menu {
+        span {
+          text-shadow: 0 0 10px $black;
+          transition: all 0.5s ease-in-out;
+        }
+
+        &:hover {
+          span {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: $white;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .dishes-bottom {
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    gap: 20px;
+
+    .card {
+      width: 125px;
+      height: 125px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $border-color;
+      border-radius: 10px;
+      padding: 5px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease-in-out;
+
+      .arrow {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $white;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        filter: grayscale(50%);
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        box-shadow: 0 0 10px $black, 0 0 20px $black, 0 0 30px $black;
+
+        .arrow {
+          visibility: visible;
+        }
+
+        img {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.container {
+  font-family: sans-serif;
+  text-align: center;
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+
+    &:nth-child(1) {
+      background-image: url("https://images.pexels.com/photos/2828549/pexels-photo-2828549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    }
+
+    &:nth-child(2) {
+      background-image: url("https://images.pexels.com/photos/1476880/pexels-photo-1476880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    }
+  }
+
+  .content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    &:nth-child(3) {
+      background: url("https://images.pexels.com/photos/1460537/pexels-photo-1460537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        no-repeat center/cover;
+    }
+  }
+}

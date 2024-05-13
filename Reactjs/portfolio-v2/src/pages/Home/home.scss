@@ -1,0 +1,126 @@
+.home-contianer {
+  color: white;
+  height: 100vh;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  hr {
+    position: absolute;
+    top: 10%;
+    left: 22.5%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 1px;
+    background: #ffffff4f;
+    margin: 20px 0;
+  }
+  .home-content {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+
+    .date-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: 80px;
+
+      .bg-date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 40px;
+        width: 150px;
+        background: red;
+        position: absolute;
+        left: -90px;
+      }
+      .date {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        z-index: 99;
+      }
+    }
+    .title {
+      font-size: 80px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 60px 220px 20px;
+    }
+
+    .desc-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .desc {
+        width: 45%;
+        display: flex;
+        justify-self: right;
+        align-items: center;
+        margin-top: 250px;
+        margin-right: 50px;
+        span {
+          width: 25%;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 2px;
+          z-index: 99;
+        }
+
+        .line {
+          width: 70%;
+          height: 3px;
+          background: #ffffff4f;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+  .carousel-controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 100px;
+    right: -2%;
+    transform: translateX(-50%);
+
+    .arrow {
+      display: flex;
+      gap: 20px;
+
+      .left {
+        cursor: pointer;
+      }
+      .right {
+        cursor: pointer;
+      }
+    }
+    .dots {
+      display: flex;
+      margin-right: 50px;
+      gap: 20px;
+      .dot {
+        width: 10px;
+        height: 10px;
+        background: #ffffff4f;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+
+        &.active {
+          background: white;
+        }
+      }
+    }
+  }
+}
