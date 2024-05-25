@@ -1,17 +1,19 @@
-import {Text, Pressable, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
-
-const CustomBtn = ({title}) => {
+const CustomBtn = ({title, bWidth, bColor, bgColor}) => {
   return (
     <View
       style={{
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         height: 45,
-        backgroundColor: '#C60A0A',
+        backgroundColor: bgColor,
         padding: 10,
         borderRadius: 5,
         marginHorizontal: 10,
+        borderWidth: bWidth,
+        borderColor: bColor,
       }}>
       <Text
         style={{

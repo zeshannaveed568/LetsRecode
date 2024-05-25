@@ -64,7 +64,7 @@ const OnboardingScreen = () => {
           position: 'absolute',
           bottom: 20,
         }}>
-        <CustomBtn title={'GET STARTED'} />
+        <CustomBtn title={'GET STARTED'} bgColor={'#C60A0A'} />
       </Pressable>
 
       <AnimatedView

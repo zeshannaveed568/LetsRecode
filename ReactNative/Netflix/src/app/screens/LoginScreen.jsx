@@ -2,6 +2,7 @@ import {View, Text, Pressable, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {ArrowLeft} from 'lucide-react-native';
 import {useNavigation} from '@react-navigation/native';
+import CustomBtn from '../components/CustomBtn';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -67,53 +68,25 @@ const LoginScreen = () => {
           </Text>
         </View>
 
-        <Pressable
-          style={{
-            width: '100%',
-            padding: 10,
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: 5,
-            marginVertical: 10,
-            borderWidth: 2,
-            borderColor: 'white',
-          }}>
-          <Text
-            style={{
-              color: 'white',
-              fontSize: 16,
-              fontWeight: 'bold',
-              letterSpacing: 0.5,
-            }}>
-            Sign In
-          </Text>
-        </Pressable>
+        <CustomBtn
+          title="Sign In"
+          bWidth={2}
+          bColor="white"
+          bgColor="transparent"
+        />
         <Text
           style={{
             color: 'rgba(255, 255, 255, 0.5)',
           }}>
           OR
         </Text>
-        <Pressable
-          style={{
-            width: '100%',
-            padding: 10,
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: 5,
-            marginVertical: 10,
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-          }}>
-          <Text
-            style={{
-              color: 'white',
-              fontSize: 16,
-              fontWeight: 'bold',
-              letterSpacing: 0.5,
-            }}>
-            Use a Sign-In Code
-          </Text>
-        </Pressable>
+
+        <CustomBtn
+          title="Use a Sign-In Code"
+          bWidth={0}
+          bColor="transparent"
+          bgColor="rgba(255, 255, 255, 0.2)"
+        />
 
         <TouchableOpacity
           onPress={handleForgotPassword}
@@ -144,17 +117,17 @@ const LoginScreen = () => {
             New to Netflix? Sign up now.
           </Text>
         </TouchableOpacity>
+        <Text
+          style={{
+            fontSize: 10,
+            color: 'rgba(255, 255, 255, 0.5)',
+            textAlign: 'left',
+            marginVertical: 20,
+            paddingHorizontal: 10,
+          }}>
+          Sign in is protected by Google reCAPTCHA to ensure you're not a bot.
+        </Text>
       </View>
-      <Text
-        style={{
-          fontSize: 10,
-          color: 'rgba(255, 255, 255, 0.5)',
-          textAlign: 'left',
-          marginVertical: 20,
-          paddingHorizontal: 10,
-        }}>
-        Sign in is protected by Google reCAPTCHA to ensure you're not a bot.
-      </Text>
     </View>
   );
 };

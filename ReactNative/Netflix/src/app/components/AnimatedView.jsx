@@ -3,8 +3,11 @@ import React from 'react';
 import Animated from 'react-native-reanimated';
 import CustomBtn from './CustomBtn';
 import {X} from 'lucide-react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const AnimatedView = ({animateViewClose, animatedStyle}) => {
+  const navigation = useNavigation();
+
   return (
     <Animated.View
       style={[
@@ -85,7 +88,9 @@ const AnimatedView = ({animateViewClose, animatedStyle}) => {
             placeholder={'Email'}
           />
         </View>
-        <CustomBtn title={'GETTING STARTED'} />
+        <Pressable onPress={() => navigation.navigate('SignUp')}>
+          <CustomBtn title={'GETTING STARTED'} bgColor={'#C60A0A'} />
+        </Pressable>
       </View>
     </Animated.View>
   );

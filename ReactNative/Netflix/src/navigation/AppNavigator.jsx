@@ -7,6 +7,7 @@ import LoginScreen from '../app/screens/LoginScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ForgotPasswordScreen from '../app/screens/ForgotPasswordScreen';
+import SignupScreen from '../app/screens/SignupScreen';
 
 const AppNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -14,12 +15,12 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="black" barStyle="light-content" />
-      <Stack.Navigator>
-        {/* <Stack.Screen
+      <Stack.Navigator initialRouteName="Splash">
+        <Stack.Screen
           name="Splash"
           component={SplashScreen}
           options={{headerShown: false}}
-        /> */}
+        />
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}
@@ -28,6 +29,11 @@ const AppNavigator = () => {
         <Stack.Screen
           name="Login"
           component={LoginScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignupScreen}
           options={{headerShown: false}}
         />
         <Stack.Screen
